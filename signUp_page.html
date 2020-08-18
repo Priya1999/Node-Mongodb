@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration Form for College Event</title>
+    <style>
+        .signUp-form {
+            widows: 300px;
+            text-align: center;
+
+        }
+
+        label {
+            width: 100px;
+            text-align: right;
+            display: inline-block;
+        }
+
+        input[type=text] {
+            width: 15%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        input[type=Email] {
+            width: 15%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        input[type=password] {
+            width: 15%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            width: 6%;
+            padding: 11px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+
+        }
+
+        h1 {
+            padding-top: 20px;
+            padding-bottom: 50px;
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body style="background-color:azure">
+    <div class="signUp-form">
+        <h1><i>Registration Form For Events</i></h1>
+        <form action="/submit" method="POST" onsubmit="alert('Registered!!!')" ;>
+            <label><b>Name: </b></label>
+            <input type="text" name="Name" placeholder="Name" required><br><br><br>
+            <label><b>Password: </b></label>
+            <input type="password" name="Password" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                required><br><br><br>
+            <label><b>Email: </b></label>
+            <input type="email" name="Email" placeholder="Email" required><br><br><br>
+            <label><b>College: </b></label>
+            <input type="text" name="College" placeholder="college Name" required><br><br><br>
+            <label><b>Department: </b></label>
+            <input type="text" name="Department" placeholder="Department Name" required><br><br><br>
+            <label><b>Mobile : </b></label>
+            <input type="text" name="Mobile" placeholder="mobile No" maxlength="10" pattern="[0-9]{10}"
+                required><br><br><br>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+</body>
+
+</html>
